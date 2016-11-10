@@ -1,0 +1,25 @@
+{
+  "name": "enavu-carousel",
+  "description": "carousel w infinite scroll using jQuery",
+  "main": "server.js",
+  "authors": [
+    "enavu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "carousel",
+    "jquery"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

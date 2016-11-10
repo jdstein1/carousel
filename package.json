@@ -1,0 +1,19 @@
+{
+  "name": "enavu-carousel",
+  "version": "1.0.0",
+  "description": "carousel w infinite scroll using jQuery",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "carousel",
+    "jquery"
+  ],
+  "author": "enavu",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "wiredep": "^4.0.0"
+  }
+}
