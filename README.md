@@ -11,3 +11,6 @@ using [web.enavu](http://web.enavu.com/tutorials/making-an-infinite-jquery-carou
 
 at some point i hope to make it independent of jQuery and portable to other frameworks.
 
+## resources
+
+* [html entities reference](http://htmlarrows.com/symbols/)

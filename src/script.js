@@ -1,38 +1,36 @@
 $(document).ready(function() {
+
   console.log('jQuery loaded');
+
+  $caro_box = $('#carousel_box');
+  console.log('$caro_box: ', $caro_box);
+  $caro_list = $('#carousel_ul');
+  console.log('$caro_list: ', $caro_list);
+  $caro_slides = $caro_list.find('li');
   $arrow_r = $('#right_scroll');
   $arrow_l = $('#left_scroll');
 
-  $caro_list = $('#carousel_ul');
-  // console.log('$caro_list: ', $caro_list);
-
-  $caro_slides = $caro_list.find('li');
-  // console.log('$caro_slides: ', $caro_slides);
-
-  function consoleMap () {
-    console.log('$caro_list.find(\'li\').map(...): ', $caro_list.find('li').map(function() {return this.id;}).get());
-  }
-
   /* write script to config the carousel's dimensions here */
 
-  //move the last list item before the first item. The purpose of this is if the user clicks previous he will be able to see the last item.
+  // move the last list item before the first item. The purpose of this is if the user clicks previous he will be able to see the last item.
   $('#carousel_ul li:first').before($('#carousel_ul li:last'));
 
+  /* set/get values */
   var index = 1; // starting index
-  makeActive(index);
-
   var slide_wid = $caro_slides.outerWidth(); // width of slide
-  // console.log('slide_wid: ', slide_wid);
-
   var caro_len = $caro_slides.length; // array length
-  // console.log('caro_len: ', caro_len);
-
   var caro_wid = slide_wid * caro_len;
-  // console.log('caro_wid: ', caro_wid);
-
   // var left_offset = 0;
-  var left_offset = 0 - slide_wid * index;
+  var left_offset = 0 - (slide_wid * index);
+
+  /* log values */
+  // console.log('index : ', index);
+  // console.log('slide_wid: ', slide_wid);
+  // console.log('caro_len: ', caro_len);
+  // console.log('caro_wid: ', caro_wid);
   // console.log('left_offset: ', left_offset);
+
+  makeActive(index);
 
   //when user clicks the image for sliding right
   $arrow_r.click(function(e){
@@ -64,7 +62,6 @@ $(document).ready(function() {
     });
 
     makeActive(index);
-
     console.groupEnd();
 
   });
@@ -98,12 +95,15 @@ $(document).ready(function() {
     });
 
     makeActive(index);
-
     console.groupEnd();
 
   });
 
-  $arrow_r.click();
+  // $arrow_r.click();
+
+  function consoleMap () {
+    console.log('$caro_list.find(\'li\').map(...): ', $caro_list.find('li').map(function() {return this.id;}).get());
+  }
 
   function makeActive (index) {
     $caro_slides.removeClass('active');

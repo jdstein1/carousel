@@ -1,6 +1,6 @@
 body {font-size: 1em;}
 
-#carousel_container, #carousel_inner {
+#carousel_box, #carousel_inner {
   position: relative;
   width: 600px; /* important (this width = width of list item(including margin) * items shown */
   z-index: 1;
@@ -52,56 +52,70 @@ body {font-size: 1em;}
 #left_scroll, #right_scroll{
   /*float:left;*/
   position: absolute;
+  top:0;
+  bottom:0;
   z-index: 10;
   height:200px;
   width:100px;
-  background-color: rgba(191,191,191,0.75);
+  background-color: rgba(127,127,127,0.5);
   overflow: hidden;
 }
 
-#left_scroll {left:0;}
+#left_scroll {left:0;right:auto;}
 
-#right_scroll{right:0;}
+#right_scroll{right:0;left:auto;}
 
 #left_scroll span, #right_scroll span{
-/*styling*/
-/*display:block;*/
-margin-left:100%;
-overflow: hidden;
+  /*display:block;*/
+  margin-left:100%;
+  overflow: hidden;
 }
 
 #left_scroll:before, #left_scroll:after, 
 #right_scroll:before, #right_scroll:after {
   position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
   font-size: 5em;
-  line-height: 2;
+  line-height: 2.5;
   height: 100%;
   width: 100%;
   text-align: center;
   display:block;
   vertical-align: middle;
   padding:0;
-  margin: 0;
+  margin:0;
   color:rgba(255,255,255,1);
   z-index: 2;
 }
+
 #left_scroll:before, 
 #right_scroll:before {
-  margin-top: 0.25em;
-  color:rgba(0,0,0,0.5);
+  margin-top: 5px;
+  color:rgba(0,0,0,0.25);
   z-index: 1;
+  /*background-color: rgba(0,255,0,0.25);*/
+}
+
+#left_scroll:after, 
+#right_scroll:after {
+  /*background-color: rgba(0,0,255,0.25);*/
 }
 
 #left_scroll:before, 
 #left_scroll:after {
-  /*content:"\9001";*/
-  content:"\2770"; /* fat arrow */
+  content:"\2770"; /* fat angle bracket */
+  content:"\276C"; /* thin angle bracket */
+  content:"\276E"; /* pointy angle bracket */
 }
 
 #right_scroll:before, 
 #right_scroll:after {
-  /*content:"\9002";*/
-  content:"\2771"; /* fat arrow */
+  content:"\2771"; /* fat angle bracket */
+  content:"\276D"; /* thin angle bracket */
+  content:"\276F"; /* pointy angle bracket */
 }
 
 .active {
