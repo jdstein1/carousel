@@ -95,13 +95,13 @@ overflow: hidden;
 #left_scroll:before, 
 #left_scroll:after {
   /*content:"\9001";*/
-  content:"\2770";
+  content:"\2770"; /* fat arrow */
 }
 
 #right_scroll:before, 
 #right_scroll:after {
   /*content:"\9002";*/
-  content:"\2771";
+  content:"\2771"; /* fat arrow */
 }
 
 .active {
