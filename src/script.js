@@ -16,7 +16,7 @@ $(document).ready(function() {
    */
 
   // move the last list item before the first item. The purpose of this is if the user clicks previous he will be able to see the last item.
-  $('#carousel_ul li:first').before($('#carousel_ul li:last'));
+  $caro_list.find('li:first').before($caro_list.find('li:last'));
 
   /* set/get values */
   var index = 1; // starting index
@@ -35,7 +35,7 @@ $(document).ready(function() {
   var intervalAutoScroll;
 
   function startScroll() {
-    intervalAutoScroll = window.setInterval(autoScroll, 1500);
+    intervalAutoScroll = window.setInterval(autoScroll, 2500);
   }
 
   function autoScroll() {
@@ -69,7 +69,7 @@ $(document).ready(function() {
     $caro_list.animate({'left' : indent},250,"swing",function(){
 
       /* when sliding to right -- move the first item to AFTER the last position */
-      $('#carousel_ul li:last').after($('#carousel_ul li:first'));
+      $caro_list.find('li:last').after($caro_list.find('li:first'));
       // consoleMap();
 
       /* set the left indent of the list to the default */
@@ -96,7 +96,7 @@ $(document).ready(function() {
     $caro_list.animate({'left' : indent},250,"swing",function(){
 
       /* when sliding to left -- move the last item to BEFORE the first position */
-      $('#carousel_ul li:first').before($('#carousel_ul li:last'));
+      $caro_list.find('li:first').before($caro_list.find('li:last'));
       // consoleMap();
 
       /* set the left indent of the list to the default */
