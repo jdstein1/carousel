@@ -10,7 +10,7 @@
   <!--endbower-->
 
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/settings.css">
+  <link rel="stylesheet" href="css/options.css">
 
 </head>
 
@@ -18,35 +18,29 @@
   <!-- START placeholder for dynamically generated carousel -->
   <!-- <div id="carousel_dyn"></div> -->
 
-  <div id="options">
-    <label for="settings_width">
-      <span>Enter width</span>
-      <input type="number" name="settings_width" id="options_width">
-    </label>
-    <label for="settings_units">
-      <span>Choose units</span>
-      <select name="settings_units" id="options_units">
-        <option value="">choose...</option>
-        <option value="px" selected="selected">px</option>
-        <option value="%">%</option>
-        <option value="em">em</option>
-      </select>
-    </label>
-    <label for="" class="form_action">
-      <input type="submit" name="settings_submit" id="options_submit">
-    </label>
-  </div>
+  <div id="options"></div>
 
-  <div id="caro_fixed"></div>
-  <div id="caro_full"></div>
+  <div id="caro_fixed" class="carousel_box"></div>
+  
+  <div id="caro_full" class="carousel_box"></div>
+  
+  <div id="plugin" class="carousel_box"></div>
 
   <!--bower:js-->
   <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="components/jquery-ui/jquery-ui.min.js"></script>
   <!--endbower-->
 
+  <script>
+  $(document).ready(function() {
+
+    console.log('jQuery loaded');
+
+  });
+  </script>
+
+  <script type="text/javascript" src="js/plugin.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="js/settings.js"></script>
 
 </body>
 
