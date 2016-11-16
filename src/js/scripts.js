@@ -23,7 +23,7 @@ $(document).ready(function() {
   var slide_wid = $caro_slides.outerWidth(); // width of slide
   var caro_len = $caro_slides.length; // array length
   var caro_wid = slide_wid * caro_len;
-  var left_offset = 0 - (slide_wid * index); // this offset centers first item in carousel
+  var left_offset = 0 - (slide_wid); // this offset centers first item in carousel
 
   /* log values */
   // console.log('index : ', index);
@@ -39,9 +39,9 @@ $(document).ready(function() {
   }
 
   function autoScroll() {
-    console.group("autoscroll!");
+    // console.group("autoscroll!");
     scrollActionR();
-    console.groupEnd();
+    // console.groupEnd();
   }
 
   function stopScroll() {
@@ -141,5 +141,13 @@ $(document).ready(function() {
     $caro_slides.removeClass('active');
     $caro_slides.eq(index).addClass('active');
   }
+
+  $('#caro_fixed').load('ajax/fixed.html', function() {
+    console.log( 'fixed' );
+  });
+
+  $('#caro_full').load('ajax/full.html', function() {
+    console.log( 'full' );
+  });
 
 });

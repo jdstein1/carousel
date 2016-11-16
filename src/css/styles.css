@@ -8,7 +8,7 @@ body {font-size:1em;}
   /*float:left;*/ /* important for inline positioning */
   overflow:hidden;  /* important (hide the items outside the div) */
   /* non-important styling below */
-  /*background-color:#ccc;*/
+  background-color:#ccc;
 }
 
 #carousel_ul {
@@ -24,8 +24,8 @@ body {font-size:1em;}
 
 #carousel_ul li{
   float:left; /* important for inline positioning of the list items */
-  width:200px;  /* fixed width, important */
-  height:200px;
+  /*width:200px;*/  /* fixed width, important */
+  /*height:200px;*/
   /* just styling below*/
   margin:0px;
   padding:0px;
