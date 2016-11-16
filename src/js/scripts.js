@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  console.log('jQuery loaded');
+  console.log('jQuery loaded - scripts.js');
 
   $caro_box = $('#carousel_box');
   $caro_list = $('#carousel_ul');
@@ -52,7 +52,7 @@ $(document).ready(function() {
   makeActive(index);
 
   function scrollActionR () {
-    console.log('starting index: ', index);
+    // console.log('starting index: ', index);
 
     // calculate the new left indent of the unordered list
     var indent = (left_offset) - slide_wid;
@@ -63,7 +63,7 @@ $(document).ready(function() {
     } else {
       index++;
     }
-    console.log('ending index: ', index);
+    // console.log('ending index: ', index);
 
     // make the sliding effect using jquery's anumate function '
     $caro_list.animate({'left' : indent},250,"swing",function(){
@@ -80,7 +80,7 @@ $(document).ready(function() {
   }
 
   function scrollActionL () {
-    console.log('starting index: ', index);
+    // console.log('starting index: ', index);
 
     /* same as for sliding right except that it's current left indent + the item width (for the sliding right it's - slide_wid) */
     var indent = (left_offset) + slide_wid;
@@ -91,7 +91,7 @@ $(document).ready(function() {
     } else {
       index--;
     }
-    console.log('ending index: ', index);
+    // console.log('ending index: ', index);
 
     $caro_list.animate({'left' : indent},250,"swing",function(){
 

@@ -7,11 +7,13 @@
   <!--bower:css-->
   <!-- <link rel="stylesheet" href="components/jquery-ui/themes/base/jquery-ui.min.css" title="jQuery UI" /> -->
   <!--endbower-->
-  <link rel="stylesheet" href="style.css" title="App Styles" />
+  <link rel="stylesheet" href="css/styles.css" title="App Styles" />
+  <link rel="stylesheet" href="css/settings.css" title="Settings Styles" />
 </head>
 
 <body>
-  <div id="carousel_dyn"></div>
+  <!-- placeholder for dynamically generated carousel -->
+  <!-- <div id="carousel_dyn"></div> -->
   <div id="carousel_box">
     <div id="left_scroll"><span>left</span></div>
       <ul id="carousel_ul">
@@ -33,11 +35,28 @@
     </ul>
     <div id="right_scroll"><span>right</span></div>
   </div>
+  <div id="settings">
+    <label for="settings_width">
+      <span>Width</span>
+      <input type="number" name="settings_width" id="settings_width">
+    </label>
+    <label for="settings_units">
+      <span>Units</span>
+      <select name="settings_units" id="settings_units">
+        <option value="">choose...</option>
+        <option value="px" selected="selected">px</option>
+        <option value="%">%</option>
+        <option value="em">em</option>
+      </select>
+    </label>
+    <input type="submit" name="settings_submit" id="settings_submit">
+  </div>
   <!--bower:js-->
   <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="components/jquery-ui/jquery-ui.min.js"></script>
   <!--endbower-->
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+  <script type="text/javascript" src="js/settings.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,18 @@
+
+#settings {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+}
+
+#settings label {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+}
+
+#settings label input {
+  display: block;
+  padding: 1em;
+  margin: 1em;
+}
