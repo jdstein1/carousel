@@ -2,43 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Carousel</title>
-    <!--bower:css-->
-    <!-- <link rel="stylesheet" href="components/jquery-ui/themes/base/jquery-ui.min.css" title="jQuery UI" /> -->
-    <!--endbower-->
-    <link rel="stylesheet" href="style.css" title="App Styles" />
+  <meta charset="UTF-8">
+  <title>Carousel</title>
+
+  <!--bower:css-->
+  <!-- <link rel="stylesheet" href="components/jquery-ui/themes/base/jquery-ui.min.css" title="jQuery UI" /> -->
+  <!--endbower-->
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/options.css">
+
 </head>
 
 <body>
-    <div id="carousel_box">
-        <div id="left_scroll"><span>left</span></div>
-        <!-- <div id="carousel_inner"> -->
-            <ul id="carousel_ul">
-                <li id="slide_0">
-                    <a href="#"><img src="http://www.fillmurray.com/200/201" /></a>
-                </li>
-                <li id="slide_1">
-                    <a href="#"><img src="http://www.fillmurray.com/201/200" /></a>
-                </li>
-                <li id="slide_2">
-                    <a href="#"><img src="http://www.fillmurray.com/201/201" /></a>
-                </li>
-                <li id="slide_3">
-                    <a href="#"><img src="http://www.fillmurray.com/200/200" /></a>
-                </li>
-                <li id="slide_4">
-                    <a href="#"><img src="http://www.fillmurray.com/200/202" /></a>
-                </li>
-            </ul>
-        <!-- </div> -->
-        <div id="right_scroll"><span>right</span></div>
-    </div>
-    <!--bower:js-->
-    <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="components/jquery-ui/jquery-ui.min.js"></script>
-    <!--endbower-->
-    <script type="text/javascript" src="script.js"></script>
+  <!-- START placeholder for dynamically generated carousel -->
+  <!-- <div id="carousel_dyn"></div> -->
+
+  <div id="options"></div>
+
+  <div id="caro_fixed" class="carousel_box"></div>
+  
+  <div id="caro_full" class="carousel_box"></div>
+  
+  <div id="plugin" class="carousel_box"></div>
+
+  <!--bower:js-->
+  <script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="components/jquery-ui/jquery-ui.min.js"></script>
+  <!--endbower-->
+
+  <script>
+  $(document).ready(function() {
+
+    console.log('jQuery loaded');
+
+  });
+  </script>
+
+  <script type="text/javascript" src="js/plugin.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
 </body>
 
 </html>

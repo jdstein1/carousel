@@ -13,4 +13,10 @@ at some point i hope to make it independent of jQuery and portable to other fram
 
 ## resources
 
+### source project
+
 * [html entities reference](http://htmlarrows.com/symbols/)
+
+### inspiration
+
+* [flickity](http://flickity.metafizzy.co/)

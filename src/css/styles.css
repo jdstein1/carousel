@@ -1,0 +1,140 @@
+body {
+  font-size:1em;
+  margin:0;
+  padding:0;
+}
+
+.carousel_box {
+  position:relative;
+  width:50%; /* important (this width = width of list item(including margin) * items shown */
+  height:200px;
+  z-index:1;
+  /*float:left;*/ /* important for inline positioning */
+  overflow:hidden;  /* important (hide the items outside the div) */
+  /* non-important styling below */
+  background-color:#ccc;
+}
+
+.carousel_ul {
+  position:relative;
+  left:-200px; /* important (this should be negative number of list items width(including margin) */
+  list-style-type:none; /* removing the default styling for unordered list items */
+  margin:0;
+  padding:0;
+  width:99999px; /* important */
+  /* non-important styling below */
+  /*background-color:#f00;*/
+}
+
+.carousel_ul li{
+  float:left; /* important for inline positioning of the list items */
+  /*width:200px;*/  /* fixed width, important */
+  /*height:200px;*/
+  /* just styling below*/
+  margin:0px;
+  padding:0px;
+  /*background-color:rgba(127,127,127,0.75);*/
+  opacity:0.25;
+}
+
+.carousel_ul li img {
+  margin-bottom:-4px; /* IE is making a 4px gap below an image inside of an anchor (<a href...>) so this is to fix that*/
+  /* styling */
+  width:190px;
+  height:190px;
+  margin:0;
+  padding:5px;
+  cursor:pointer;
+  cursor:hand;
+  border:0;
+  /*background-color:rgba(255,255,255,0.5);*/
+}
+
+.left_scroll, .right_scroll{
+  /*float:left;*/
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:10;
+  width:60px;
+  background-color:rgba(255,255,255,0);
+  overflow:hidden;
+}
+
+.left_scroll {right:auto;}
+
+.right_scroll{left:auto;}
+
+.left_scroll span, .right_scroll span{
+  /*display:block;*/
+  margin-left:100%;
+  overflow:hidden;
+}
+
+.left_scroll:before, .left_scroll:after, 
+.right_scroll:before, .right_scroll:after {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  font-size:5em;
+  line-height:2.5;
+  height:100%;
+  width:100%;
+  text-align:center;
+  display:block;
+  vertical-align:middle;
+  padding:0;
+  margin:0;
+  color:rgba(255,255,255,1);
+  z-index:2;
+}
+
+.left_scroll:before, 
+.right_scroll:before {
+  margin-top:6px;
+  color:rgba(63,63,63,0.5);
+  z-index:1;
+  /*background-color:rgba(0,255,0,0.25);*/
+}
+
+.left_scroll:after, 
+.right_scroll:after {
+  /*background-color:rgba(0,0,255,0.25);*/
+}
+
+.left_scroll:before, 
+.left_scroll:after {
+  content:"\276E"; /* pointy angle bracket */
+  content:"\276C"; /* thin angle bracket */
+  content:"\2770"; /* fat angle bracket */
+}
+
+.right_scroll:before, 
+.right_scroll:after {
+  content:"\276F"; /* pointy angle bracket */
+  content:"\276D"; /* thin angle bracket */
+  content:"\2771"; /* fat angle bracket */
+}
+
+.active {
+  /*background-color:black !important;*/
+  opacity:1 !important;
+}
+
+/** 
+ * these rules apply to the slides according to the order in which 
+ * they appear in the HTML.  i.e., when the jQ rearranges them.
+ */
+
+.carousel_ul li:nth-child(1n+1) {background-color:red !important;}
+.carousel_ul li:nth-child(2n+2) {background-color:blue !important;}
+.carousel_ul li:nth-child(3n+3) {background-color:green !important;}
+.carousel_ul li:nth-child(4n+4) {background-color:cyan !important;}
+.carousel_ul li:nth-child(5n+5) {background-color:magenta !important;}
+
+#caro_fixed {width:600px;}
+#caro_full {width:100%;}
