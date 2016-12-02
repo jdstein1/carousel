@@ -11,6 +11,23 @@ using [web.enavu](http://web.enavu.com/tutorials/making-an-infinite-jquery-carou
 
 at some point i hope to make it independent of jQuery and portable to other frameworks.
 
+## dependencies
+
+* Node.js
+* NPM
+* Bower
+
+## instructions
+
+Install dependencies by running these commands in terminal app:
+
+    $ npm install
+    $ bower install
+
+Run the app in a local server with:
+
+    $ node server
+
 ## resources
 
 ### source project
