@@ -1,0 +1,12 @@
+{
+  "slides":
+    [
+      {"src":"http://www.fillmurray.com/200/200"},
+      {"src":"http://www.fillmurray.com/201/200"},
+      {"src":"http://www.fillmurray.com/200/201"},
+      {"src":"http://www.fillmurray.com/201/199"},
+      {"src":"http://www.fillmurray.com/199/201"},
+      {"src":"http://www.fillmurray.com/199/200"},
+      {"src":"http://www.fillmurray.com/200/199"}
+  ]
+}

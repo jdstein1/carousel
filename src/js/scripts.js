@@ -6,12 +6,12 @@ $(document).ready(function() {
     console.log( 'options: ', status );
   });
 
-  $('#caro_fixed').load('ajax/caro_fixed.html', function(response, status, xhr) {
+  $('#caro_fixed').load('ajax/caro.html', function(response, status, xhr) {
     console.log( 'fixed: ', status );
     runCarousel(this);
   });
 
-  $('#caro_full').load('ajax/caro_full.html', function(response, status, xhr) {
+  $('#caro_full').load('ajax/caro.html', function(response, status, xhr) {
     console.log( 'full: ', status );
     runCarousel(this);
   });
