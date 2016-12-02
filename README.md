@@ -24,9 +24,9 @@ Install dependencies by running these commands in terminal app:
     $ npm install
     $ bower install
 
-Run the app in a local server with:
+Run the app in a local Node.js server with:
 
-    $ node server
+    $ npm start
 
 ## resources
 
